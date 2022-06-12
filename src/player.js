@@ -7,40 +7,30 @@ class Player {
   }
 
   moveUp() {
+    clear();
     this.row -= SQUARE_SIDE;
   }
 
   moveDown() {
+    clear();
     this.row += SQUARE_SIDE;
   }
 
   moveLeft() {
+    clear();
     this.col -= SQUARE_SIDE;
   }
 
   moveRight() {
+    clear();
     this.col += SQUARE_SIDE;
   }
 
-  draw() {
+  drawPlayer() {
     // push();
     // fill("orange");
     // rect(this.col, this.row, this.width, this.height);
-    image(viking, this.col, this.row, this.width, this.height);
-
     // pop();
-  }
-
-  move() {
-    if (keyIsDown(ARROW_DOWN)) {
-      this.moveDown();
-    } else if (keyIsDown(ARROW_UP)) {
-      this.moveUp();
-    }
-    if (keyIsDown(ARROW_LEFT)) {
-      this.moveLeft();
-    } else if (keyIsDown(ARROW_RIGHT)) {
-      this.moveRight();
-    }
+    image(vikingImage, this.col, this.row, this.width, this.height);
   }
 }
